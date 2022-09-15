@@ -19,12 +19,20 @@
             document.getElementById("NOK").innerHTML = norske_kroner
         }
 
-        async function hentNOK(){
+        async function hentKurs(){
             var forespørsel = await fetch("https://openexchangerates.org/api/latest.json?app_id=062ea16b4bed4ee9946a29df8ec67aaa")
             var svar = await forespørsel.json()
             var nok = svar.rates.NOK
             return nok
         }  
+
+        async function hentKursSEK(){
+            var forespørsel = await fetch("https://openexchangerates.org/api/latest.json?app_id=062ea16b4bed4ee9946a29df8ec67aaa")
+            var svar = await forespørsel.json()
+            var SEK = svar.rates.SEK
+            return SEK
+        }  
+
     </script>
 </body>
 </html>
